@@ -123,7 +123,7 @@ Complete connection diagram.
 |15|D7|
 |16|Ground|
 
-	![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
+![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
 
 12. Connect the Arduino USB cable between the Arduino and your computer.
 
