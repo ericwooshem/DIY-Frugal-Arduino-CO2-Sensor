@@ -9,7 +9,7 @@ CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](w
 - Displays the current CO₂ level so you can quickly check if the current conditions are safe or not. 
 - Records CO₂ levels over time. Good for repeated events like school or office when it is impossible to check while there. 
 - Accurate within ~60 ppm under typical conditions.
-- Costs $60 to $120 - less than half the cost of commercial sensors
+- Costs $60 to $110 - less than half the cost of commercial sensors
 
 ## Introduction: Why measure CO₂?
 
@@ -17,7 +17,7 @@ As society reopens amid the ongoing COVID-19 pandemic, preventing the spread of 
 
 Ideally, we would measure the concentration of COVID-19 virus particles in the air directly, however such a sensor does not exist. Instead, researchers identified [carbon dioxide as a proxy measurement](https://www.washingtonpost.com/health/2021/02/10/carbon-dioxide-device-coronavirus/) to determine if a space is well-ventilated, as doubling the CO₂ concentration doubles the risk of infection [2][3]. Humans exhale carbon dioxide at approximately 100 times the concentration of the ambient air. High CO₂ levels indicate inadequate ventilation so if a contagious person were present, virus particles remain in the air and there is a high risk that others in the space will get sick. 
 
-The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6] . Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability.
+The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7].
 
 ## Instructions
 
@@ -29,7 +29,7 @@ This is a *frugal* CO₂ sensor so most of the parts can be interchanged with si
 
 #### Cost
 
-One sensor can be built for roughly $120, and 10 sensors for about $87 each if all parts are purchased new. Reusing components you already have reduces the cost significantly.
+One sensor can be built for roughly $100, and 10 sensors for about $87 each if all parts are purchased new. Reusing components you already have reduces the cost significantly.
 
 #### List of Parts
 
@@ -46,7 +46,7 @@ One sensor can be built for roughly $120, and 10 sensors for about $87 each if a
 |Jumper wires|10-20|
 |USB Power Bank Battery 5V: optional; 9V battery adapter or other power supplies work as well|1|
 |16x2 LCD Display: Optional; only needed if you want to display the current CO₂ levels|1|
-|Small Box: Cardboard, 3D printed, etc. Just large enough to hold everything, and with a small hole for the CO₂ sensor intake|1|
+|Small Box: Cardboard, 3D printed, etc. Just large enough to hold everything, and with holes for the CO₂ sensor intake and LCD screen if used|1|
 
 ### Assembly
 
@@ -66,15 +66,17 @@ Complete connection diagram.
 
 	![Card Reader Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I3.png)
 
-4. (For Nano only) Place and push in the Arduino Nano into one of the breadboards, as shown.
+4a. (For Nano only) Place and push in the Arduino Nano into one of the breadboards, as shown.
 
 	![Arduino Nano Breadboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I5.png)
+
+4b. (For Uno or Mega) The connectors are built in, so this step is not necessary. However, you may need to run a wire from a particular pin to a breadboard row if more than one connection is required. 
 
 5. Plug the SCD-30 cable headers into either port of the CO₂ sensor. Both ports are the same, but the plug has a correct orientation.
 
 	![SCD-30 Cable](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I6.png)
 
-6. (If using display) Poke the LCD into a breadboard (For mini-breadboards, use a second breadboard). Connect wires to pins 2-6 and 11-16. Note: you can also use male-to-female wires and connect to the LCD pins directly, but we found this to be more difficult.
+6. (If using display) Poke the LCD into a breadboard. Mini-breadboards: use a second breadboard. Connect wires to pins 2-6 and 11-16. Note: you can also use male-to-female wires and connect to the LCD pins directly, but we found this to be more difficult.
 
 	![LCD](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I7.png)
 
@@ -83,28 +85,37 @@ Complete connection diagram.
 	![Arduino-Breadboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I8.png)
 
 8. Connect the Real Time Clock module wires:
-	1. VCC to 5V row created in step 7.
-	2. GND to the ground row created in step 7.
-	3. SDA to Arduino pin A4
-	4. SCL to Arduino pin A5
+
+|Sensor Wire|Breadboard Row|
+|---|---|
+|VCC | 5V row created in step 7|
+|GND | the ground row created in step 7|
+|SDA | Arduino pin A4|
+|SCL | Arduino pin A5|
 
 	![RTC-Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I9.png)
 
 9. Connect the SD Card Reader wires:
-	1. GND to the ground row created in step 7.
-	2. VCC to 5V row created in step 7.
-	3. MISO to Arduino pin D12
-	4. MOSI to Arduino pin D11
-	5. SCK to Arduino pin D13
-	6. CS to Arduino pin D10
+
+|Sensor Wire|Breadboard Row|
+|---|---|
+|GND |ground row created in step 7|
+|VCC to 5V row created in step 7|
+|MISO | Arduino pin D12|
+|MOSI | Arduino pin D11|
+|SCK | Arduino pin D13|
+|CS | Arduino pin D10|
 
 	![SD Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I10.png)
 
 10. Connect the SCD-30 Sensor wires:
-	1. Black: ground row created in step 7.
-	2. Red: 5V row created in step 7.
-	3. Blue: Arduino pin A4
-	4. Yellow: Arduino pin A5
+
+|Sensor Wire|Breadboard Row|
+|---|---|
+|Black| ground row created in step 7|
+|Red| 5V row created in step 7|
+|Blue| Arduino pin A4|
+|Yellow| Arduino pin A5|
 
 	![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
 
@@ -127,7 +138,7 @@ Complete connection diagram.
 
 12. Connect the Arduino USB cable between the Arduino and your computer.
 
-13. (If not already installed) Download [ArduinoIDE](https://www.arduino.cc/en/software/)
+13. (If not already installed) Download [ArduinoIDE](https://www.arduino.cc/en/software/).
 
 14. Set the time on the RTC: Download the code file *Set_RTC_Time.ino* and open it in ArduinoIDE.
 
@@ -141,13 +152,13 @@ Complete connection diagram.
 
 17. Go to Tools>Port, and select the one including “USBx”, where “x” is the port you plugged the Arduino into. If you are unsure which port, start with the first option and click “Get Board Info". If you get an error, it is the wrong one. Try the next port and repeat until one works.
 
-18. Go to Tools>Programmer, and select “AVR ISP”
+18. Go to Tools>Programmer, and select “AVR ISP”.
 
 	![AVR ISP](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I18.png)
 
-19. In the RTC_Time_Set code, look for the line `DateTime(2021, 10, 13, 18, 17, 00)`. Change the numbers to match the form (Year, month, day, hour(24 hr time), minute, second) for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 3 seconds before the time you set. However, within ~5 minutes is usually good enough.
+19. In the *RTC_Time_Set.ino* code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
 
-20. Upload the program to the Arduino by clicking on the arrow button next to the check mark button. Warning: Do not touch until it says "Done uploading".
+20. Upload the program to the Arduino by clicking on the right arrow button next to the check mark button. Warning: Do not touch until it says, "Done uploading."
 
 	![Arduino Upload Code](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I22.png)
 
@@ -184,36 +195,36 @@ Complete connection diagram.
 - If the first value is 0, this is a known bug. Simply ignore that value.
 - If unusual values persist, check that the cable is firmly plugged into the sensor, and the wires are properly connected to the breadboard and Arduino.
 - Try swapping the cable to the other port on the SCD-30 sensor.
-- 
 
 ## Accessing and Using Collected CO₂ Data
 
-After using the CO₂ sensor for some time, you may want to analyze the data to see whether the places you have been are safe. You can upload the data to your computer from the (micro) SD card, put it into a spreadsheet program, and create graphs or analyze it.
+When using the sensor, you can simply read the values from the screen. However, to get a more complete picture of how safe each place you have been is, it is necessary to analyze the data in aggregate. You can upload the data to your computer from the (micro) SD card, put it into a spreadsheet program, and create graphs or analyze it.
 
 1. Remove the (Micro) SD card from the adapter module by pressing firmly and releasing until it springs out, then pulling it out gently. 
 2. Connect the (Micro) SD card to your computer, using adapters if necessary.
 3. Copy the file on the card “CO2_Data.TXT” and change the file extension to ".csv". 
-4. Open it with Microsoft Excel, Libre Office Calc, Google Sheets, or other spreadsheet software.
+4. Open it with Microsoft Excel, Libre Office Calc, Google Sheets, or other spreadsheet software. You may need to right click then select "Open with" and choose your spreadsheet software if the computer defaults to another application.
 3. If you get a pop-up window asking how to import the data, choose the automatic selection or split by ";".
-5. The data should be imported.
+5. Click "OK."The data should be imported.
 
 ![Data import demo](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Data_Import_Demo.png)
 
 ### Data Analysis Tricks
 
-- We suggest downloading the data and deleting the file from the SD card between every time you use the sensor so that it is easy to track what each set of data corresponds to.
-- Convert time in HH:MM:SS to separate columns for hours, minutes, and seconds by opening the text file in a text editor and doing "Find & Replace." Find ":" and replace with ";" then import to the spreadsheet software with the ";" delimiter. 
+- We suggest that you download the data file and delete it from the SD card after you use the sensor each day so that you can more easily keep track of your data and where you collected the data.
+- To convert time in HH:MM:SS to separate columns for hours, minutes, and seconds, open the text file in a text editor and do "Find & Replace." Find ":" and replace with ";" then import to the spreadsheet software with the ";" delimiter. 
 - The first data point is recorded as 0 because the Arduino tries to record data before the initial reading is complete. This is incorrect and should be deleted.
 - Every time the Arduino is powered off and restarted, it will append the initial set of data but add a new line with the date in the form YYYY-MM-DD. 
-	- Sometimes our sensor gets bumped and restarts unexpectedly. Searching for "-" can detect these errors. The date line needs to be removed before graphing.
+	- Sometimes the sensor gets bumped and restarts unexpectedly. Searching for "-" can detect these errors. The date line needs to be removed before graphing.
 	- If you use the sensor for several days between downloading the data, look for these date lines to figure out when each chunk of data was collected.
+	- If the sensor is left on continuously past midnight, it will not create a new date line but simply jump to 00:00:00.
 
 ## Testing & Validation
 
 - Outside away from people and buildings, the sensor should read between 400 and 500 ppm.
 - If you breathe directly on the sensor, it should read over 10,000 and up to 40,000.
 - The sensor is very sensitive to nearby sources of CO₂. For example, we observed that the sensor reads 500-550 ppm when we walk outside with it in our backpack because our breath is enough to raise the CO₂ levels locally.
-- One sensor was used in a college undergraduate lab course. Students were asked to analyze the sensor's accuracy. The sensor typically performed with readings consistently about 50 ppm too high. 
+- A version of this sensor was used in a college undergraduate lab course. Students were asked to analyze the sensor's accuracy. The sensor typically performed with readings consistently about 50 ppm too high. 
 - Calibration is very difficult and not recommended. The sensors come pre-calibrated if ordered from Adafruit.
 
 ## Comparison to Aranet Sensor
@@ -244,7 +255,7 @@ A company called Aranet produces CO₂ sensors that are ready to use out of the 
 | | | |
 |Battery Type:|Rechargeable USB|2 x AA|
 |Battery Life:|~3 days|Up to 2 years|
-|Cost:|est $60-120|$249|
+|Cost:|est $60-110|$249|
 
 \* Multiply by the size in GB of micro SD card
 
@@ -270,8 +281,9 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [5] K. Alhambra and D. Czernia, CO₂ Breathing Emission Calculator. https://www.omnicalculator.com/ecology/co2-breathing-emission   
 [6] UK Health and Safety Executive, Ventilation and Air Conditioning During the Coronavirus Pandemic.
  https://www.hse.gov.uk/coronavirus/equipment-and-machinery/air-conditioning-and-ventilation/identifying-poorly-ventilated-areas.htm   
-[7] Adafruit SCD-30 Resources. https://learn.adafruit.com/adafruit-scd30   
-[8] G. Lambert, "How to Write Data to Files on an SD Card with Arduino," Circuit Basics. https://www.circuitbasics.com/writing-data-to-files-on-an-sd-card-on-arduino/   
-[9] "Arduino - RTC" Arduino Get Started. https://arduinogetstarted.com/tutorials/arduino-rtc   
-[10] Adafruit RTClib, GitHub. https://github.com/adafruit/RTClib/tree/master/examples    
+[7] V. Greenwood, "Is Conference Room Air Making You Dumber?" The New York Times, 2019. https://www.nytimes.com/2019/05/06/health/conference-room-air.html   
+[8] Adafruit SCD-30 Resources. https://learn.adafruit.com/adafruit-scd30   
+[9] G. Lambert, "How to Write Data to Files on an SD Card with Arduino," Circuit Basics. https://www.circuitbasics.com/writing-data-to-files-on-an-sd-card-on-arduino/   
+[10] "Arduino - RTC" Arduino Get Started. https://arduinogetstarted.com/tutorials/arduino-rtc   
+[11] Adafruit RTClib, GitHub. https://github.com/adafruit/RTClib/tree/master/examples    
 
