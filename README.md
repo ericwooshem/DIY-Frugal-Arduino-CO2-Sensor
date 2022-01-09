@@ -155,6 +155,36 @@ Complete connection diagram.
 
 22. Plug the Arduino into a computer, USB Power Bank, or other power supply to turn the sensor on. Whenever it is given power, the sensor system will display the current CO₂ readings on the screen and save them to a file on the SD card.
 
+## Troubleshooting
+
+[Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)
+[Arduino Nano Select Processor](https://support.arduino.cc/hc/en-us/articles/4401874304274-Select-the-right-processor-for-Arduino-Nano)
+[Wiring Intro for Beginners](https://learn.adafruit.com/breadboards-for-beginners/introduction)   
+[SCD-30 Sensor](https://learn.adafruit.com/adafruit-scd30)   
+[Alternative Method to Set Date and Time on RTC](https://create.arduino.cc/projecthub/tittiamo68/clock-set-date-time-0d46a4) Note: Use the LCD wiring from this project instead.
+[Intro to SD and Micro SD Card Modules with Arduino](https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390)
+
+### Arduino to computer connection not working / code won't upload
+
+- Check [Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)
+- Try each port option
+- Try each processor option
+- Swap the USB cable with another - sometimes the cables break
+- Try a [Loopback Test](https://support.arduino.cc/hc/en-us/articles/360020366520-How-to-do-a-loopback-test)
+
+### Most components appear to work, but one does not
+
+- Most likely this is a wiring issue. Check that the wires leading to that component are matched to the correct pins and firmly attached.
+- Re-upload the sensor code.
+- Try a different power supply. If the current one is too weak, some components may work but others will not have enough power to operate.
+
+### Sensor returns ridiculously large or small readings
+
+- Anything between 400 ppm outdoors or in well-ventilated areas to 4000 ppm in stuffy buildings and inside cars is probably valid.
+- If the first value is 0, this is a known bug. Simply ignore that value.
+- If unusual values persist, check that the cable is firmly plugged into the sensor, and the wires are properly connected to the breadboard and Arduino.
+- Try swapping the cable to the other port on the SCD-30 sensor.
+- 
 
 ## Accessing and Using Collected CO₂ Data
 
@@ -177,6 +207,14 @@ After using the CO₂ sensor for some time, you may want to analyze the data to 
 - Every time the Arduino is powered off and restarted, it will append the initial set of data but add a new line with the date in the form YYYY-MM-DD. 
 	- Sometimes our sensor gets bumped and restarts unexpectedly. Searching for "-" can detect these errors. The date line needs to be removed before graphing.
 	- If you use the sensor for several days between downloading the data, look for these date lines to figure out when each chunk of data was collected.
+
+## Testing & Validation
+
+- Outside away from people and buildings, the sensor should read between 400 and 500 ppm.
+- If you breathe directly on the sensor, it should read over 10,000 and up to 40,000.
+- The sensor is very sensitive to nearby sources of CO₂. For example, we observed that the sensor reads 500-550 ppm when we walk outside with it in our backpack because our breath is enough to raise the CO₂ levels locally.
+- One sensor was used in a college undergraduate lab course. Students were asked to analyze the sensor's accuracy. The sensor typically performed with readings consistently about 50 ppm too high. 
+- Calibration is very difficult and not recommended. The sensors come pre-calibrated if ordered from Adafruit.
 
 ## Comparison to Aranet Sensor
 
