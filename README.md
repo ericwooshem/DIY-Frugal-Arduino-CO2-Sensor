@@ -9,7 +9,7 @@ CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](w
 - Displays the current CO₂ level so you can quickly check if the current conditions are safe or not. 
 - Records CO₂ levels over time. Good for repeated events like school or office when it is impossible to check while there. 
 - Accurate within ~60 ppm under typical conditions.
-- Costs $60 to $110 - less than half the cost of commercial sensors
+- Costs $60 to $110 - less than half the cost of commercial sensors.
 
 ## Introduction: Why measure CO₂?
 
