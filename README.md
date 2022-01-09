@@ -2,7 +2,7 @@
 
 CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](www.brianwooshem.com)
 
-![CO2 Sensor Complete Assembly in Cardboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensor_Complete.png) ![CO2 Sensor Inside Assembly](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensor_Insides.png)  ![CO2 Sensor Electrical/Components](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/SCD_30_Logger.png)
+![CO2 Sensor Complete Assembly in Cardboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensor_Complete.png) ![CO2 Sensor Header Pic](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_SensorOpen_Graph.png)
 
 ## Features
 
@@ -50,7 +50,7 @@ One sensor can be built for roughly $120, and 10 sensors for about $87 each if a
 
 ### Assembly
 
-![Connection Diagram] (https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/SCD_30_Logger.png)
+![Connection Diagram](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/SCD_30_Logger.png)
 
 Complete connection diagram.
 
@@ -106,9 +106,9 @@ Complete connection diagram.
 	3. Blue: Arduino pin A4
 	4. Yellow: Arduino pin A5
 
-	![SCD-30 Wires] (https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
+	![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
 
-11. Connect the LCD Wires
+11. Connect the LCD Wires   
 |LCD Pin No.|Arduino Pin|
 |---|---|
 |2|5V|
@@ -217,7 +217,7 @@ A company called Aranet produces CO₂ sensors that are ready to use out of the 
 ## License
 
 All text, graphics, and non-code content is licensed [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)    
-All code is licensed under the [GNU General Public License v3] (https://www.gnu.org/licenses/gpl-3.0.en.html)
+All code is licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 RTClib and Adafruit_SCD30 are Copyright (c) Adafruit Industries and used under the open source MIT license.   
 Arduino IDE and related components are open source and licensed under the GNU GPL v2 and/or CC BY-SA Arduino.
@@ -228,8 +228,8 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [2] Z. Peng and J. Jimenez, “Exhaled CO₂ as a COVID-19 Infection Risk Proxy for Different Indoor Environments and Activities, ACS, 2021. https://pubs.acs.org/doi/10.1021/acs.estlett.1c00183   
 [3] C. Mooney, “The Coronavirus is Airborne. Here’s How to Know if You’re Breathing Other People’s Breath,” The Washington Post, 2021. https://www.washingtonpost.com/health/2021/02/10/carbon-dioxide-device-coronavirus/   
 [4] NOAA Global Monitoring Laboratory, “Trends in Atmospheric Carbon Dioxide.” https://gml.noaa.gov/ccgg/trends/   
-[5] K. Alhambra and D. Czernia, CO₂ Breathing Emission Calculator. https://www.omnicalculator.com/ecology/co2-breathing-emission 
-[6] UK Health and Safety Executive, Ventilation and Air Conditioning During the Coronavirus Pandemic.  
+[5] K. Alhambra and D. Czernia, CO₂ Breathing Emission Calculator. https://www.omnicalculator.com/ecology/co2-breathing-emission   
+[6] UK Health and Safety Executive, Ventilation and Air Conditioning During the Coronavirus Pandemic.
  https://www.hse.gov.uk/coronavirus/equipment-and-machinery/air-conditioning-and-ventilation/identifying-poorly-ventilated-areas.htm   
 [7] Adafruit SCD-30 Resources. https://learn.adafruit.com/adafruit-scd30   
 [8] G. Lambert, "How to Write Data to Files on an SD Card with Arduino," Circuit Basics. https://www.circuitbasics.com/writing-data-to-files-on-an-sd-card-on-arduino/   
