@@ -62,7 +62,7 @@ Complete connection diagram.
 
 	![RTC-Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I4.png)
 
-3. Attach 6 male-to-female wires for all 6 pins on the card reader 
+3. Attach 6 male-to-female wires for all 6 pins on the card reader.
 
 	![Card Reader Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I3.png)
 
@@ -108,7 +108,8 @@ Complete connection diagram.
 
 	![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
 
-11. Connect the LCD Wires   
+11. Connect the LCD Wires:
+
 |LCD Pin No.|Arduino Pin|
 |---|---|
 |2|5V|
@@ -128,13 +129,13 @@ Complete connection diagram.
 
 13. (If not already installed) Download [ArduinoIDE](https://www.arduino.cc/en/software/)
 
-14. Set the time on the RTC: Download the code file *Set_RTC_Time.ino* and open it in ArduinoIDE
+14. Set the time on the RTC: Download the code file *Set_RTC_Time.ino* and open it in ArduinoIDE.
 
 15. Go to Tools>Board and select your Arduino type.
 
 	![Select board](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I15.png)
 
-16. (Arduino Nano only) Go to Tools>Processor and select "ATmega328P (Old Bootloader)"
+16. (Arduino Nano only) Go to Tools>Processor and select "ATmega328P (Old Bootloader)".
 
 	![Arduino Nano Processor](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I16.png)
 
@@ -146,7 +147,7 @@ Complete connection diagram.
 
 19. In the RTC_Time_Set code, look for the line `DateTime(2021, 10, 13, 18, 17, 00)`. Change the numbers to match the form (Year, month, day, hour(24 hr time), minute, second) for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 3 seconds before the time you set. However, within ~5 minutes is usually good enough.
 
-20. Upload the program to the Arduino by clicking on the arrow button next to the check mark button. Warning: Do not touch until it says "Done uploading"
+20. Upload the program to the Arduino by clicking on the arrow button next to the check mark button. Warning: Do not touch until it says "Done uploading".
 
 	![Arduino Upload Code](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I22.png)
 
