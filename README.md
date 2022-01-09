@@ -100,7 +100,7 @@ Complete connection diagram.
 |Sensor Wire|Breadboard Row|
 |---|---|
 |GND |ground row created in step 7|
-|VCC to 5V row created in step 7|
+|VCC | 5V row created in step 7|
 |MISO | Arduino pin D12|
 |MOSI | Arduino pin D11|
 |SCK | Arduino pin D13|
@@ -231,10 +231,10 @@ When using the sensor, you can simply read the values from the screen. However, 
 
 A company called Aranet produces CO₂ sensors that are ready to use out of the box. Many researchers have recommended them. Here's how our DIY sensor compares.
 
-|  |[Adafruit SCD-30](https://www.adafruit.com/product/4867)|[Aranet4](https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor)|
+|  |[Adafruit SCD-30](https://www.adafruit.com/product/4867) [12]|[Aranet4](https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor) [13]|
 |---|---|---|
 |Range:|400-10000ppm|0-9999ppm
-|Accuracy:|±30 ppm + 3%|0-2000ppm, ±50ppm ± 3% reading;     2001-9999ppm ±10% of reading |
+|Accuracy:|±30 ppm + 3%|0-2000ppm: ±50ppm ± 3% reading  <br>   2001-9999ppm: ±10% of reading |
 | | | |
 |Accuracy At:  |
 |	420ppm (outside)|	±42.6ppm|±62.6ppm|
@@ -286,4 +286,6 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [9] G. Lambert, "How to Write Data to Files on an SD Card with Arduino," Circuit Basics. https://www.circuitbasics.com/writing-data-to-files-on-an-sd-card-on-arduino/   
 [10] "Arduino - RTC" Arduino Get Started. https://arduinogetstarted.com/tutorials/arduino-rtc   
 [11] Adafruit RTClib, GitHub. https://github.com/adafruit/RTClib/tree/master/examples    
+[12] Adafruit, "Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic." https://www.adafruit.com/product/4867   
+[13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor
 
