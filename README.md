@@ -66,11 +66,11 @@ Complete connection diagram.
 
 	![Card Reader Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I3.png)
 
-4a. (For Nano only) Place and push in the Arduino Nano into one of the breadboards, as shown.
+4. (For Nano only) Place and push in the Arduino Nano into one of the breadboards, as shown.
 
 	![Arduino Nano Breadboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I5.png)
 
-4b. (For Uno or Mega) The connectors are built in, so this step is not necessary. However, you may need to run a wire from a particular pin to a breadboard row if more than one connection is required. 
+	- (For Uno or Mega) The connectors are built in, so this step is not necessary. However, you may need to run a wire from a particular pin to a breadboard row if more than one connection is required.  
 
 5. Plug the SCD-30 cable headers into either port of the CO₂ sensor. Both ports are the same, but the plug has a correct orientation.
 
@@ -106,7 +106,7 @@ Complete connection diagram.
 |SCK | Arduino pin D13|
 |CS | Arduino pin D10|
 
-	![SD Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I10.png)
+![SD Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I10.png)
 
 10. Connect the SCD-30 Sensor wires:
 
@@ -117,7 +117,7 @@ Complete connection diagram.
 |Blue| Arduino pin A4|
 |Yellow| Arduino pin A5|
 
-	![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
+![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
 
 11. Connect the LCD Wires:
 
