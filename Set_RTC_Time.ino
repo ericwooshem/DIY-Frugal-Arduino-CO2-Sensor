@@ -1,3 +1,17 @@
+// RTC Time Set Code, CC By-NC 2022 Eric Woo-Shem
+/*
+Info:
+RTC = Real Time Clock
+
+Time given will be in military time (24 hour clock)
+
+Resources Used:
+https://learn.adafruit.com/adafruit-scd30
+https://www.circuitbasics.com/writing-data-to-files-on-an-sd-card-on-arduino/
+https://arduinogetstarted.com/tutorials/arduino-rtc
+https://github.com/adafruit/RTClib/tree/master/examples
+*/
+
 #include "RTClib.h"
 RTC_DS1307 rtc;
 void setup() {
