@@ -93,7 +93,7 @@ Complete connection diagram.
 |SDA | Arduino pin A4|
 |SCL | Arduino pin A5|
 
-	![RTC-Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I9.png)
+   ![RTC-Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I9.png)
 
 9. Connect the SD Card Reader wires:
 
