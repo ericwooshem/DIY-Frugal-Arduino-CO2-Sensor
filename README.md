@@ -157,7 +157,7 @@ Complete connection diagram.
 	![AVR ISP](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I18.png)
 
 19. Install the necessary packages:
-     1. Go to Tools>Manage Libraries
+     1. Go to Tools>Manage Libraries. This may take a minute to load.
 
 
            ![Open Libraries Manager](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I23.png)
