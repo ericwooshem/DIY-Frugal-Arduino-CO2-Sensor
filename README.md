@@ -140,7 +140,7 @@ Complete connection diagram.
 
 13. (If not already installed) Download [ArduinoIDE](https://www.arduino.cc/en/software/).
 
-14. Set the time on the RTC: Download the code file *Set_RTC_Time.ino* and open it in ArduinoIDE.
+14. Set the time on the RTC: Download the code file [*Set_RTC_Time.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) and open it in ArduinoIDE.
 
 15. Go to Tools>Board and select your Arduino type.
 
@@ -156,13 +156,13 @@ Complete connection diagram.
 
 	![AVR ISP](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I18.png)
 
-19. In the *RTC_Time_Set.ino* code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
+19. In the [*RTC_Time_Set.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
 
 20. Upload the program to the Arduino by clicking on the right arrow button next to the check mark button. Warning: Do not touch until it says, "Done uploading."
 
 	![Arduino Upload Code](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I22.png)
 
-21. Upload the CO₂ sensor code: Download *CO2SensorCode.ino* and open it in Arduino IDE. Upload the program to the Arduino by clicking on the arrow button next to the check mark button.
+21. Upload the CO₂ sensor code: Download [*CO2SensorCode.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Co2SensorCode.ino) and open it in Arduino IDE. Upload the program to the Arduino by clicking on the arrow button next to the check mark button.
 
 22. Plug the Arduino into a computer, USB Power Bank, or other power supply to turn the sensor on. Whenever it is given power, the sensor system will display the current CO₂ readings on the screen and save them to a file on the SD card.
 
