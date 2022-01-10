@@ -165,7 +165,7 @@ Complete connection diagram.
 	   
      2. Type "Adafruit_SCD30" into the search bar at the top and press enter. This may take a minute to load.
      3. Look for the package named "Adafruit SCD30". If the package isn't already installed, press the "Install" button. You may need to install dependencies.
-     4. Repeat for RTClib. You may need to install "SD" and "LiquidCrystal", but those should be pre-installed.
+     4. Repeat for RTClib (named "RTClib"). You may need to install "SD" and "LiquidCrystal", but those should be pre-installed.
 
 
 20. In the [*RTC_Time_Set.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
