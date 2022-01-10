@@ -23,7 +23,7 @@ The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations
 
 ### Parts
 
-This is a *frugal* CO₂ sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "CO2_Sensor_Bill_of_Materials.xlsx". Different sheets show suggestions for products to purchase for the lowest cost for varying numbers of sensors. The quantities and exact cost will autocompute if you plug in the number of sensors you want to build. 
+This is a *frugal* CO₂ sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "[CO2_Sensor_Bill_of_Materials.xlsx](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/CO2_Sensor_Bill_of_Materials.xlsx)". Different sheets show suggestions for products to purchase for the lowest cost for varying numbers of sensors. The quantities and exact cost will autocompute if you plug in the number of sensors you want to build. 
 
 **Note:** Product suggestions in Bill of Materials are for convenience only. This project does not receive any incentive, financial or otherwise, for suggesting any particular product.
 
