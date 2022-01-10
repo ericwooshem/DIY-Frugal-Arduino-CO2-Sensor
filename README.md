@@ -158,7 +158,11 @@ Complete connection diagram.
 
 19. Install the necessary packages:
      1. Go to Tools>Manage Libraries
+
+
            ![Open Libraries Manager](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I23.png)
+	   
+	   
      2. Type "Adafruit_SCD30" into the search bar at the top and press enter.
      3. If the package isn't already installed, press the "Install" button.
      4. Repeat for RTClib (second package in list). You may need to install "SD" and "LiquidCrystal", but those should be pre-installed.
