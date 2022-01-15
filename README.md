@@ -180,12 +180,12 @@ Complete connection diagram.
 
 ## Troubleshooting
 
-[Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)
-[Arduino Nano Select Processor](https://support.arduino.cc/hc/en-us/articles/4401874304274-Select-the-right-processor-for-Arduino-Nano)
-[Wiring Intro for Beginners](https://learn.adafruit.com/breadboards-for-beginners/introduction)   
+[Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)   
+[Arduino Nano Select Processor](https://support.arduino.cc/hc/en-us/articles/4401874304274-Select-the-right-processor-for-Arduino-Nano)   
+[Wiring Intro for Beginners](https://learn.adafruit.com/breadboards-for-beginners/introduction)    
 [SCD-30 Sensor](https://learn.adafruit.com/adafruit-scd30)   
-[Alternative Method to Set Date and Time on RTC](https://create.arduino.cc/projecthub/tittiamo68/clock-set-date-time-0d46a4) Note: Use the LCD wiring from this project instead.
-[Intro to SD and Micro SD Card Modules with Arduino](https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390)
+[Alternative Method to Set Date and Time on RTC](https://create.arduino.cc/projecthub/tittiamo68/clock-set-date-time-0d46a4) Note: Use the LCD wiring from this project instead.  
+[Intro to SD and Micro SD Card Modules with Arduino](https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390)  
 
 ### Arduino to computer connection not working / code won't upload
 
