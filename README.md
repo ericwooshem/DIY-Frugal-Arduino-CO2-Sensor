@@ -1,6 +1,6 @@
 # DIY Frugal Arduino CO₂ Sensor Monitor
 
-CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](www.brianwooshem.com)
+CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](https://www.brianwooshem.com)
 
 ![CO2 Sensor Complete Assembly in Cardboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensor_Complete.png) ![CO2 Sensor Header Pic](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_SensorOpen_Graph.png)
 
@@ -318,7 +318,7 @@ A company called Aranet produces CO₂ sensors that are ready to use out of the 
 ## Contributors
 [Eric Woo-Shem](https://github.com/ericwooshem): Sensor design, electrical connections & diagrams, RTC and sensor data code, part selection.
 
-[Brian Woo-Shem](www.brianwooshem.com): Engineering guidance, research, documentation, sensor testing and validation.
+[Brian Woo-Shem](https://www.brianwooshem.com): Engineering guidance, research, documentation, sensor testing and validation.
 
 ## License
 
