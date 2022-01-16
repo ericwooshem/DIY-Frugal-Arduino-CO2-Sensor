@@ -1,4 +1,4 @@
-# DIY Frugal Arduino CO₂ Sensor
+# DIY Frugal Arduino CO₂ Sensor Monitor
 
 CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](www.brianwooshem.com)
 
@@ -10,6 +10,7 @@ CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](w
 - Records CO₂ levels over time. Good for repeated events like school or office when it is impossible to check while there. 
 - Accurate within ~60 ppm under typical conditions.
 - Costs $60 to $110 - less than half the cost of commercial sensors.
+- No soldering required! Just connect wires.
 
 ## Introduction: Why measure CO₂?
 
@@ -142,26 +143,24 @@ Complete connection diagram.
 
 14. Set the time on the RTC: Download the code file [*Set_RTC_Time.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) and open it in ArduinoIDE.
 
-15. Go to Tools>Board and select your Arduino type.
+15. Go to Tools>Board and select your Arduino type.   
 
 	![Select board](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I15.png)
 
-16. (Arduino Nano only) Go to Tools>Processor and select "ATmega328P (Old Bootloader)".
+16. (Arduino Nano only) Go to Tools>Processor and select "ATmega328P (Old Bootloader)".   
 
 	![Arduino Nano Processor](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I16.png)
 
 17. Go to Tools>Port, and select the one including the number “x”, equal to the port you plugged the Arduino into. If you are unsure which port, start with the first option and click “Get Board Info". If you get an error, it is the wrong one. Try the next port and repeat until one works. You can also try uploading the code on each port in step 20.
 
-18. Go to Tools>Programmer, and select “AVR ISP”.
+18. Go to Tools>Programmer, and select “AVR ISP”.   
 
 	![AVR ISP](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I18.png)
 
 19. Install the necessary packages:
-     1. Go to Tools>Manage Libraries. This may take a minute to load.
-
+     1. Go to Tools>Manage Libraries. This may take a minute to load.   
 
            ![Open Libraries Manager](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I23.png)
-	   
 	   
      2. Type "Adafruit_SCD30" into the search bar at the top and press enter. This may take a minute to load.
      3. Look for the package named "Adafruit SCD30". If the package isn't already installed, press the "Install" button. You may need to install dependencies.
@@ -170,8 +169,7 @@ Complete connection diagram.
 
 20. In the [*RTC_Time_Set.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
 
-21. Upload the program to the Arduino by clicking on the right arrow button next to the check mark button. Warning: Do not touch until it says, "Done uploading."
-
+21. Upload the program to the Arduino by clicking on the right arrow button next to the check mark button. Warning: Do not touch until it says, "Done uploading."   
 	![Arduino Upload Code](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I22.png)
 
 22. Upload the CO₂ sensor code: Download [*CO2SensorCode.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Co2SensorCode.ino) and open it in Arduino IDE. Upload the program to the Arduino by clicking on the arrow button next to the check mark button.
@@ -208,23 +206,69 @@ Complete connection diagram.
 - If unusual values persist, check that the cable is firmly plugged into the sensor, and the wires are properly connected to the breadboard and Arduino.
 - Try swapping the cable to the other port on the SCD-30 sensor.
 
+## Monitor Usage Tips
+
+- The sensor can be placed in a backpack with a small (~3") opening left in the zipper so that air can circulate through. 
+- Do not crush the sensor by mistake. Keep it on top of any heavy objects like books and lunchboxes.
+- Save your data and compare the average value at each location to the acceptable limit.
+- Use the sensor to evaluate different ventilation strategies.
+- If you know your schedule, you can match your recorded data to each specific location.
+- If you start your sensor while in your car then go out to your destination, the first few values will be extremely high because cars tend to have high CO₂ values unless the windows are open.
+- We suggest that you download the data file and delete it from the SD card after you use the sensor each day so that you can more easily keep track of your data and where you collected the data. Otherwise the data file gets too cumbersome to decipher.
+
 ## Accessing and Using Collected CO₂ Data
 
 When using the sensor, you can simply read the values from the screen. However, to get a more complete picture of how safe each place you have been is, it is necessary to analyze the data in aggregate. You can upload the data to your computer from the (micro) SD card, put it into a spreadsheet program, and create graphs or analyze it.
 
 1. Remove the (Micro) SD card from the adapter module by pressing firmly and releasing until it springs out, then pulling it out gently. 
 2. Connect the (Micro) SD card to your computer, using adapters if necessary.
-3. Copy the file on the card “CO2_Data.TXT” and change the file extension to ".csv". 
-4. Open it with Microsoft Excel, Libre Office Calc, Google Sheets, or other spreadsheet software. You may need to right click then select "Open with" and choose your spreadsheet software if the computer defaults to another application.
-3. If you get a pop-up window asking how to import the data, choose the automatic selection or split by ";".
-5. Click "OK."The data should be imported.
+3. Copy the file on the card “CO2_Data.TXT” to your computer. The file is structured as follows:   
+	![CO2 Data File](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Data_File.png)   
+4. Typically, we want to import the data to a spreadsheet software like Excel or Google Sheets. We also want the times and the CO2 readings separated for so we can plot the values and compare over time. See the instructions below for your specific software. 
 
-![Data import demo](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Data_Import_Demo.png)
+
+### Text File Modification: Google Sheets or Microsoft Excel (Advanced, almost always works)
+1. Open the _.txt_ file in a text editor.  
+2. Use Find & Replace, Finding ";" (semicolon) and Replace with "," (comma). _Optional: to separate the hours, minutes, and seconds into three separate columns for doing calculations like time elapsed from the start or to convert it to another date-time format, in addition Find ":" (colon), and replace with "," (comma)._   
+	![Find Replace 1](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Data_FindReplace.png)   
+3. The file will now look as follows. Left: only times and readings. Right: times separated into hours, minutes, and seconds, with readings also separated.   
+	![Find Replace 2](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Data_FindReplace2.png)   
+4. Change the file extension to _.csv_ (on Windows [see instructions below](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor#windows-changing-file-extension-to-csv))
+5. Open with your favorite spreadsheet software. Example results:
+	![Example text file modification results in Excel](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Excel_EditTextFileResult.png)
+
+### Microsoft Excel Text Import Wizard (Shortcut, sometimes works)
+1. Open Excel
+2. Go to the "Data" tab and select "From Text"   
+	![Excel Text Import 1](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Excel_Text_Import_Setup.png)   
+3. Follow the Text Import Wizard. Make sure to select "Delimited" on the first step, and include "Semicolon" on the list of delimiters on the second step.   
+	![Excel Text Import Wizard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Excel_Text_Import_Wizard.png)    
+4. Data will now be in two columns, one for time and one for the sensor readings.
+
+### LibreOffice
+1. Change the file extension to _.csv_ (on Windows [see instructions below](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor#windows-changing-file-extension-to-csv))
+2. Open with LibreOffice. You may need to right click then select "Open with" and choose your spreadsheet software if the computer defaults to another application.
+3. Choose Semicolon in the Text Import window, then click OK. The data will be imported.   
+	![Data import demo](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Data_Import_Demo.png)
+
+### Windows - Changing file extension to CSV
+1. If the file extension (_.txt, .csv_, etc.) is not visible in File Manager, go to "View" tab and check "File name extensions"    
+	![File Name Extensions Windows](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Data_Import_FileNameExtension.png)   
+2. Rename the file to have _.csv_ at the end instead of _.txt_    
+	![File Renaming Windows](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_Data_Import_FileName_Windows_Warning.png)   
+3. If you get a warning, select "Yes."
+
 
 ### Data Analysis Tricks
 
-- We suggest that you download the data file and delete it from the SD card after you use the sensor each day so that you can more easily keep track of your data and where you collected the data.
-- To convert time in HH:MM:SS to separate columns for hours, minutes, and seconds, open the text file in a text editor and do "Find & Replace." Find ":" and replace with ";" then import to the spreadsheet software with the ";" delimiter. 
+- To save your graphs, "Save As" and choose _.xls_, _.xlsx_, or _.ods_ file formats.
+- To get time elapsed, convert HH:MM:SS to separate columns for hours, minutes, and seconds using the detailed instructions under "Text File Modification." Insert a new column between Seconds and CO2 [ppm]. If all zero values, date lines, and other garbage data have been removed, and there is a single header row, paste the following line of code in D2.    
+
+        =C2+B2*60+A2*3600-($C$2+$B$2*60+$A$2*3600)   
+
+	- then select `Ctrl + D` and apply it to all the rest of the rows. The result will look something like this:    
+		![Time elapsed](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/FileImporting/CO2_TimeElapsed.png)
+
 - The first data point is recorded as 0 because the Arduino tries to record data before the initial reading is complete. This is incorrect and should be deleted.
 - Every time the Arduino is powered off and restarted, it will append the initial set of data but add a new line with the date in the form YYYY-MM-DD. 
 	- Sometimes the sensor gets bumped and restarts unexpectedly. Searching for "-" can detect these errors. The date line needs to be removed before graphing.
@@ -300,4 +344,3 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [11] Adafruit RTClib, GitHub. https://github.com/adafruit/RTClib/tree/master/examples    
 [12] Adafruit, "Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic." https://www.adafruit.com/product/4867   
 [13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor
-
