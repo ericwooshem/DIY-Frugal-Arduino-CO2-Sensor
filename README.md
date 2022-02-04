@@ -122,19 +122,19 @@ Complete connection diagram.
 
 11. Connect the LCD Wires:
 
-|LCD Pin No.|Arduino Pin|
-|---|---|
-|VDD|5V|
-|V0|D6|
-|RS|D9|
-|RW|Ground|
-|E|D8|
-|D4|D5|
-|D5|D4|
-|D6|D3|
-|D7|D2|
-|A|D7|
-|K|Ground|
+|LCD Pin|LCD Pin Num.|Arduino Pin|
+|---|---|---|
+|VDD|2|5V|
+|V0|3|D6|
+|RS|4|D9|
+|RW|5|Ground|
+|E|6|D8|
+|D4|11|D5|
+|D5|12|D4|
+|D6|13|D3|
+|D7|14|D2|
+|A|15|D7|
+|K|16|Ground|
 
 ![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
 
