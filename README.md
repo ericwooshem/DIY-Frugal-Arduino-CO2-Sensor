@@ -124,16 +124,17 @@ Complete connection diagram.
 
 |LCD Pin No.|Arduino Pin|
 |---|---|
-|2|5V|
-|3|D6|
-|5|Ground|
-|6|D8|
-|11|D5|
-|12|D4|
-|13|D3|
-|14|D2|
-|15|D7|
-|16|Ground|
+|VDD|5V|
+|V0|D6|
+|RS|D9|
+|RW|Ground|
+|E|D8|
+|D4|D5|
+|D5|D4|
+|D6|D3|
+|D7|D2|
+|A|D7|
+|K|Ground|
 
 ![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
 
