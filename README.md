@@ -122,7 +122,7 @@ Complete connection diagram.
 
 11. Connect the LCD Wires:
 
-|LCD Pin|LCD Pin Num.|Arduino Pin|
+|LCD Pin|LCD Pin Num. (Left to right)|Arduino Pin|
 |---|---|---|
 |VDD|2|5V|
 |V0|3|D6|
