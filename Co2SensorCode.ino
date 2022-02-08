@@ -1,4 +1,6 @@
 // Co2 Sensor code, CC By-NC 2022 Eric Woo-Shem
+// Version 5.1, updated 2022-02-04
+// https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor
 /*
 Info:
 RTC = Real Time Clock
@@ -26,7 +28,7 @@ String fileName = "CO2_Data.txt"; // Set variable holding filename (You can chan
 int debug=1; // Set to 1 for console debugging
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void setup() { // Start setup
-  Serial.begin(115200); // Begin Serial (On computer)
+  Serial.begin(115200); // Begin Serial (On computer for debug)
   while (!Serial); // Wait until Serial is started
 
   lcd.begin(16, 2); // Set size of LCD screen
@@ -46,6 +48,16 @@ void setup() { // Start setup
   myFile.close(); // Close file to save
   digitalWrite(7, HIGH); // Set LCD brightness, you can change it if you want to
   analogWrite(6, 120); // Setting LCD contrast, you can change it if you want to
+  lcd.setCursor(0,0);
+  lcd.print("DIY CO2 Monitor");
+  lcd.setCursor(2,1);
+  lcd.print("Firmware V.5.1");
+  delay(1000);
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("(C)Eric Woo-Shem");
+  delay(1000);
+  lcd.clear();
 } // End setup
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void loop() { // Start loop (forever)
