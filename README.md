@@ -2,7 +2,7 @@
 
 CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](https://www.brianwooshem.com)
 
-![CO2 Sensor Complete Assembly in Cardboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensor_Complete.png) ![CO2 Sensor Header Pic](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_SensorOpen_Graph.png)
+![CO2 Sensor Several Different Makes](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Sensors_Collection_Makes_2.png) ![CO2 Data Graph](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Data_Illustration_v3.png)
 
 ## Features
 
@@ -281,8 +281,8 @@ When using the sensor, you can simply read the values from the screen. However, 
 - Outside away from people and buildings, the sensor should read between 400 and 500 ppm.
 - If you breathe directly on the sensor, it should read over 10,000 and up to 40,000.
 - The sensor is very sensitive to nearby sources of CO₂. For example, we observed that the sensor reads 500-550 ppm when we walk outside with it in our backpack because our breath is enough to raise the CO₂ levels locally.
-- A version of this sensor was used in a college undergraduate lab course. Students were asked to analyze the sensor's accuracy. The sensor typically performed with readings consistently about 50 ppm too high. 
-- Calibration is very difficult and not recommended. The sensors come pre-calibrated if ordered from Adafruit.
+- A version of this sensor was used in a college-level instrumentation course. Students were asked to analyze the sensor's accuracy. The sensor typically performed within specs. 
+- The sensors come pre-calibrated if ordered from Adafruit but out of 25 sensors we tested, they average about 50ppm too high without calibration. Use the calibration code for a single sensor, or assemble the [calibration tool](https://github.com/bwooshem/SCD-30-CO2-Sensor-Calbiration-Tool) if many sensors are being calibrated at once.
 
 ## Comparison to Aranet Sensor
 
