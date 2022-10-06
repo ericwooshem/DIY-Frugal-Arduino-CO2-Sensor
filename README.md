@@ -318,9 +318,11 @@ A company called Aranet produces CO₂ sensors that are ready to use out of the 
 \* Multiply by the size in GB of micro SD card
 
 ## Contributors
-[Eric Woo-Shem](https://github.com/ericwooshem): Sensor design, electrical connections & diagrams, RTC and sensor data code, part selection.
+[Eric Woo-Shem](https://github.com/ericwooshem): Sensor design, assembly documentation/electrical diagrams/visualizations, programming: sensor firmware/calibration/RTC time set, component selection.
 
-[Brian Woo-Shem](https://www.brianwooshem.com): Engineering guidance, research, documentation, sensor testing and validation.
+[Brian Woo-Shem](https://www.brianwooshem.com): Engineering guidance, research, documentation, data analysis, educational curriculum development, sensor testing and validation.
+
+Thank you to the [Santa Clara University Department of Mechanical Engineering](https://www.scu.edu/engineering/academic-programs/department-of-mechanical-engineering/) for providing photos of sensor builds and feedback from students when this project was adapted into a laboratory for the Modern Instrumentation course.
 
 ## License
 
