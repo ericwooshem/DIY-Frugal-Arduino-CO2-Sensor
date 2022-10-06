@@ -6,8 +6,8 @@ CC BY-NC-SA [Eric Woo-Shem](https://github.com/ericwooshem) & [Brian Woo-Shem](h
 
 ## Features
 
-- Displays the current CO₂ level so you can quickly check if the current conditions are safe or not. 
-- Records CO₂ levels over time. Good for repeated events like school or office when it is impossible to check while there. 
+- Displays the current CO₂ level so you can quickly check if the current conditions are safe. 
+- Records CO₂ levels over time. Good for tracking regularly-scheduled events (eg. school & work). 
 - Accurate within ~60 ppm under typical conditions.
 - Costs $60 to $110 - less than half the cost of commercial sensors.
 - No soldering required! Just connect wires.
@@ -20,17 +20,17 @@ Ideally, we would measure the concentration of COVID-19 virus particles in the a
 
 The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7]. CO₂ sensing is used in Heating, Ventilation, and Air Conditioning (HVAC) control and energy-saving thermostats to detect when a room is occupied and only operate air conditioning or heating during those times [14][15]. This can save energy by not running equipment while a building is unoccupied, while ensuring that people in the building have clean, healthy air [14].
 
-## Instructions
+# Instructions
 
 ### Parts
 
-This is a *frugal* CO₂ sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "[CO2_Sensor_Bill_of_Materials.xlsx](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/CO2_Sensor_Bill_of_Materials.xlsx)". Different sheets show suggestions for products to purchase for the lowest cost for varying numbers of sensors. The quantities and exact cost will autocompute if you plug in the number of sensors you want to build. 
+This is a *frugal* CO₂ sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "[CO2_Sensor_Bill_of_Materials.xlsx](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/CO2_Sensor_Bill_of_Materials.xlsx)". Different sheets show suggestions for products to purchase for the lowest cost for varying numbers of sensors. The quantities and exact cost autocompute if you plug in the number of sensors you want to build. 
 
 **Note:** Product suggestions in Bill of Materials are for convenience only. This project does not receive any incentive, financial or otherwise, for suggesting any particular product.
 
 #### Cost
 
-One sensor can be built for roughly $100, and 10 sensors for about $87 each if all parts are purchased new. Reusing components you already have reduces the cost significantly.
+One sensor can be built for roughly $100, and 10 sensors for about $87 each if all parts are purchased new (As of August 2021).
 
 #### List of Parts
 
@@ -49,7 +49,7 @@ One sensor can be built for roughly $100, and 10 sensors for about $87 each if a
 |16x2 LCD Display: Optional; only needed if you want to display the current CO₂ levels|1|
 |Small Box: Cardboard, 3D printed, etc. Just large enough to hold everything, and with holes for the CO₂ sensor intake and LCD screen if used|1|
 
-### Assembly
+## Assembly
 
 ![Connection Diagram](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/SCD_30_Logger.png)
 
@@ -138,11 +138,15 @@ Complete connection diagram.
 
 ![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
 
+Congratulations! The sensor is fully assembled. Now connect the Arduino to your computer and upload the program to use it.
+
+## Uploading the Program
+
 12. Connect the Arduino USB cable between the Arduino and your computer.
 
 13. (If not already installed) Download [ArduinoIDE](https://www.arduino.cc/en/software/).
 
-14. Set the time on the RTC: Download the code file [*Set_RTC_Time.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) and open it in ArduinoIDE.
+14. Set the time on the RTC (if not already set): Download the code file [*Set_RTC_Time.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) and open it in ArduinoIDE.
 
 15. Go to Tools>Board and select your Arduino type.   
 
@@ -178,7 +182,7 @@ Complete connection diagram.
 
 23. Plug the Arduino into a computer, USB Power Bank, or other power supply to turn the sensor on. Whenever it is given power, the sensor system will display the current CO₂ readings on the screen and save them to a file on the SD card.
 
-## Troubleshooting
+# Troubleshooting
 
 [Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)   
 [Arduino Nano Select Processor](https://support.arduino.cc/hc/en-us/articles/4401874304274-Select-the-right-processor-for-Arduino-Nano)   
@@ -205,22 +209,22 @@ Complete connection diagram.
 
 - Anything between 400 ppm outdoors or in well-ventilated areas to 4000 ppm in stuffy buildings and inside cars is probably valid.
 - If the first value is 0, this is a known bug. Simply ignore that value.
-- If unusual values persist, check that the cable is firmly plugged into the sensor, and the wires are properly connected to the breadboard and Arduino.
+- Check that the cable is firmly plugged into the sensor, and the wires are properly connected to the breadboard and Arduino.
 - Try swapping the cable to the other port on the SCD-30 sensor.
 
-## Monitor Usage Tips
+# Monitor Usage Tips
 
-- The sensor can be placed in a backpack with a small (~3") opening left in the zipper so that air can circulate through. 
+- The sensor is sensitive to wind; it works best to place it slightly inside the cases or place a small piece of paper between the sensor and the opening. 
+- Do not seal the container entirely; the sensor will not have access to the current air conditions.
+- The sensor can be placed in a backpack/purse with a small (~3") opening left in the zipper so that air can circulate through. 
 - Do not crush the sensor by mistake. Keep it on top of any heavy objects like books and lunchboxes.
 - Save your data and compare the average value at each location to the acceptable limit.
-- Use the sensor to evaluate different ventilation strategies.
 - If you know your schedule, you can match your recorded data to each specific location.
-- If you start your sensor while in your car then go out to your destination, the first few values will be extremely high because cars tend to have high CO₂ values unless the windows are open.
-- We suggest that you download the data file and delete it from the SD card after you use the sensor each day so that you can more easily keep track of your data and where you collected the data. Otherwise the data file gets too cumbersome to decipher.
+- Download the data file and delete it from the SD card after you use the sensor each day so that you can more easily keep track of your data and where you collected the data. Otherwise the data file gets large and cumbersome.
 
 ## Accessing and Using Collected CO₂ Data
 
-When using the sensor, you can simply read the values from the screen. However, to get a more complete picture of how safe each place you have been is, it is necessary to analyze the data in aggregate. You can upload the data to your computer from the (micro) SD card, put it into a spreadsheet program, and create graphs or analyze it.
+When using the sensor, you can simply read the values from the screen. However, to get a more complete picture of how safe each place is, it is necessary to analyze the data for the entire time you are there. You can upload the data to your computer from the (micro) SD card, put it into a spreadsheet program, and create graphs or analyze it.
 
 1. Remove the (Micro) SD card from the adapter module by pressing firmly and releasing until it springs out, then pulling it out gently. 
 2. Connect the (Micro) SD card to your computer, using adapters if necessary.
@@ -277,13 +281,12 @@ When using the sensor, you can simply read the values from the screen. However, 
 	- If you use the sensor for several days between downloading the data, look for these date lines to figure out when each chunk of data was collected.
 	- If the sensor is left on continuously past midnight, it will not create a new date line but simply jump to 00:00:00.
 
-## Testing & Validation
+# Testing & Validation
 
 - Outside away from people and buildings, the sensor should read between 400 and 500 ppm.
 - If you breathe directly on the sensor, it should read over 10,000 and up to 40,000.
 - The sensor is very sensitive to nearby sources of CO₂. For example, we observed that the sensor reads 500-550 ppm when we walk outside with it in our backpack because our breath is enough to raise the CO₂ levels locally.
-- A version of this sensor was used in a college-level instrumentation course. Students were asked to analyze the sensor's accuracy. The sensor typically performed within specs. 
-- The sensors come pre-calibrated if ordered from Adafruit but out of 25 sensors we tested, they average about 50ppm too high without calibration. Use the calibration code for a single sensor, or assemble the [calibration tool](https://github.com/bwooshem/SCD-30-CO2-Sensor-Calbiration-Tool) if many sensors are being calibrated at once.
+- The sensors come pre-calibrated if ordered from Adafruit. Out of 25 sensors we tested, most were within spec but a few were as low as 300ppm or as high as 660ppm without calibration. Use the calibration code for a single sensor, or assemble the [calibration tool](https://github.com/bwooshem/SCD-30-CO2-Sensor-Calbiration-Tool) for calibrating many sensors quickly.
 
 ## Comparison to Aranet Sensor
 
