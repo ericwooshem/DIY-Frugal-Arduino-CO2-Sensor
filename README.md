@@ -18,7 +18,7 @@ As society reopens amid the ongoing COVID-19 pandemic, preventing the spread of 
 
 Ideally, we would measure the concentration of COVID-19 virus particles in the air directly, however such a sensor does not exist. Instead, researchers identified [carbon dioxide as a proxy measurement](https://www.washingtonpost.com/health/2021/02/10/carbon-dioxide-device-coronavirus/) to determine if a space is well-ventilated, as doubling the CO₂ concentration doubles the risk of infection [2][3]. Humans exhale carbon dioxide at approximately 100 times the concentration of the ambient air. High CO₂ levels indicate inadequate ventilation so if a contagious person were present, virus particles remain in the air and there is a high risk that others in the space will get sick. 
 
-The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7].
+The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7]. CO₂ sensing is used in Heating, Ventilation, and Air Conditioning (HVAC) control and energy-saving thermostats to detect when a room is occupied and only operate air conditioning or heating during those times [14][15]. This can save energy by not running equipment while a building is unoccupied, while ensuring that people in the building have clean, healthy air [14].
 
 ## Instructions
 
@@ -169,6 +169,7 @@ Complete connection diagram.
 
 
 20. In the [*RTC_Time_Set.ino*](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Set_RTC_Time.ino) code, go to line 19 with the code `rtc.adjust(DateTime(2021, 10, 13, 18, 17, 00));`. Change the numbers to match the form '(Year, month, day, hour in 24 hour time, minute, second)' for the current date and time. The RTC module will be set to the time specified when you upload the code. Tip: If you want very precise time, set the minutes and seconds for about a minute out, then watch the clock and hit upload about 4-6 seconds before the time you set. However, within ~5 minutes is usually good enough.
+     1. Alternative method: A different code from [Arduino Get Started](https://arduinogetstarted.com/tutorials/arduino-rtc) can automatically set the RTC to the time on your computer; follow the instructions at that link to set the RTC.
 
 21. Upload the program to the Arduino by clicking on the right arrow button next to the check mark button. Warning: Do not touch until it says, "Done uploading."   
 	![Arduino Upload Code](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I22.png)
@@ -344,4 +345,6 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [10] "Arduino - RTC" Arduino Get Started. https://arduinogetstarted.com/tutorials/arduino-rtc   
 [11] Adafruit RTClib, GitHub. https://github.com/adafruit/RTClib/tree/master/examples    
 [12] Adafruit, "Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic." https://www.adafruit.com/product/4867   
-[13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor
+[13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor   
+[14] CO2Meter.com, "CO2 Sensors Improve Energy Efficiency in HVAC," 2022. https://www.co2meter.com/blogs/news/co2-sensors-hvac-energy-efficiency   
+[15] Honeywell, "Carbon Dioxide (CO₂) HVAC Basics," 1998. https://customer.honeywell.com/resources/Techlit/TechLitDocuments/63-0000s/63-7049.pdf
