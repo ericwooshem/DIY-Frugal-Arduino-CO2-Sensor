@@ -1,6 +1,18 @@
-// Co2 Sensor code, CC By-NC 2022 Eric Woo-Shem
-// Version 5.1, updated 2022-02-04
-// https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor
+/*  DIY Frugal Arduino CO2 Sensor Code
+ *  
+ *  (C) 2022 Eric Woo-Shem
+ *  Version 5.2, updated 2022-10-05
+ *  
+ *  https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor
+ *  
+ *  This program is free software: you can redistribute it and/or modify it under the terms of the 
+ *  GNU General Public License version 3 as published by the Free Software Foundation.
+ *  
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+ *  even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+ *  GNU General Public License at https://www.gnu.org/licenses/gpl-3.0.en.html for more details.
+  */
+
 /*
 Info:
 RTC = Real Time Clock
@@ -25,11 +37,15 @@ RTC_DS1307 rtc; // Define RTC (Real Time Clock)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 File myFile; // Define file "myFile"
 String fileName = "CO2_Data.txt"; // Set variable holding filename (You can change the filename)
-int debug=1; // Set to 1 for console debugging
+const int debug = 1; // Set to 1 for console debugging
+const int readDelay = 100; // in ms. How long to wait between readings in addition to sensor reset time of 1-2s.
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void setup() { // Start setup
-  Serial.begin(115200); // Begin Serial (On computer for debug)
-  while (!Serial); // Wait until Serial is started
+  if (debug==1) // If in debug mode
+    {
+    Serial.begin(115200); // Begin Serial (On computer for debug)
+    while (!Serial); // Wait until Serial is started
+    }
 
   lcd.begin(16, 2); // Set size of LCD screen
   pinMode(6, OUTPUT); // Set what pin 6 does (output)
@@ -50,13 +66,13 @@ void setup() { // Start setup
   analogWrite(6, 120); // Setting LCD contrast, you can change it if you want to
   lcd.setCursor(0,0);
   lcd.print("DIY CO2 Monitor");
-  lcd.setCursor(2,1);
-  lcd.print("Firmware V.5.1");
-  delay(1000);
+  lcd.setCursor(0,1);
+  lcd.print("Firmware V.5.2");
+  delay(1500);
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("(C)Eric Woo-Shem");
-  delay(1000);
+  delay(1500);
   lcd.clear();
 } // End setup
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -81,6 +97,7 @@ void loop() { // Start loop (forever)
     lcd.setCursor(0,0); // Set LCD Screen cursor position
     lcd.print(time.timestamp(DateTime::TIMESTAMP_TIME)); // Write the time to LCD Screen 
     lcd.setCursor(0,1); // Set LCD Screen cursor position
-    lcd.print("Co2: "+String(scd30.CO2)); // Write the CO2 level to the LCD Screen
+    lcd.print("CO2: "+String(scd30.CO2)); // Write the CO2 level to the LCD Screen
   } // End "If CO2 data"
+  delay(readDelay);
 } // End loop
