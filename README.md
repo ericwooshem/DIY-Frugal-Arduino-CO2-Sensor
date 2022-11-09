@@ -18,7 +18,7 @@ As society reopens amid the ongoing COVID-19 pandemic, preventing the spread of 
 
 Ideally, we would measure the concentration of COVID-19 virus particles in the air directly, however such a sensor does not exist. Instead, researchers identified [carbon dioxide as a proxy measurement](https://www.washingtonpost.com/health/2021/02/10/carbon-dioxide-device-coronavirus/) to determine if a space is well-ventilated, as doubling the CO₂ concentration doubles the risk of infection [2][3]. Humans exhale carbon dioxide at approximately 100 times the concentration of the ambient air. High CO₂ levels indicate inadequate ventilation so if a contagious person were present, virus particles remain in the air and there is a high risk that others in the space will get sick. 
 
-The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and up to 450 ppm in urban environments [4]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7]. CO₂ sensing is used in Heating, Ventilation, and Air Conditioning (HVAC) control and energy-saving thermostats to detect when a room is occupied and only operate air conditioning or heating during those times [14][15]. This can save energy by not running equipment while a building is unoccupied, while ensuring that people in the building have clean, healthy air [14].
+The typical outdoor air CO₂ levels are between 410-420 ppm in remote locations, and around 450 ppm in urban environments [4][16]. We exhale roughly 40000 ppm CO₂ [5]. Aerosol researchers recommend keeping CO₂ below 800 ppm to prevent the spread of COVID-19 [1][2][3][6]. Aside from the pandemic, elevated CO₂ levels make a room feel “stuffy” and can cause a decline in cognitive ability [7]. CO₂ sensing is used in Heating, Ventilation, and Air Conditioning (HVAC) control and energy-saving thermostats to detect when a room is occupied and only operate air conditioning or heating during those times [14][15]. This can save energy by not running equipment while a building is unoccupied, while ensuring that people in the building have clean, healthy air [14].
 
 # Instructions
 
@@ -77,9 +77,7 @@ Complete connection diagram.
 
 	![SCD-30 Cable](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I6.png)
 
-6. (If using display) Poke the LCD into a breadboard. Mini-breadboards: use a second breadboard. Connect wires to pins 2-6 and 11-16. Note: you can also use male-to-female wires and connect to the LCD pins directly, but we found this to be more difficult.
-
-	![LCD](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I7.png)
+6. (If using display) Poke the LCD into a breadboard. Mini-breadboards: use a second breadboard. Note: you can also use male-to-female wires and connect to the LCD pins directly, but we found this to be more difficult.
 
 7. Connect the Ground on the Arduino to an unused row on the breadboard. Connect the 5V on the Arduino to a different unused row. Below is an example for mini-breadboards.
 
@@ -120,9 +118,9 @@ Complete connection diagram.
 
 ![SCD-30 Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I11.png)
 
-11. Connect the LCD Wires:
+11. Connect the LCD Wires: Short wires cut to length are preferred because they are more robust and make the device more compact. If using mini-breadboards, connect the LCD breadboard to the digital pin side of the Arduino breadboard using the little clip. Long wires are no longer recommended because they tend to get snagged and fall out. 
 
-|LCD Pin|LCD Pin Num. (Left to right)|Arduino Pin|
+|LCD Pin Label|LCD Pin Position (Left to right)|Arduino Pin|
 |---|---|---|
 |VDD|2|5V|
 |V0|3|D6|
@@ -353,3 +351,4 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor   
 [14] CO2Meter.com, "CO2 Sensors Improve Energy Efficiency in HVAC," 2022. https://www.co2meter.com/blogs/news/co2-sensors-hvac-energy-efficiency   
 [15] Honeywell, "Carbon Dioxide (CO₂) HVAC Basics," 1998. https://customer.honeywell.com/resources/Techlit/TechLitDocuments/63-0000s/63-7049.pdf
+[16] Acuma [Air.health](https://air.health/): Look up CO₂ levels for any address in the San Francisco Bay Area. 
