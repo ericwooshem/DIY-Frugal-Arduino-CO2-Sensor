@@ -134,9 +134,11 @@ Complete connection diagram.
 |A|15|D7|
 |K|16|Ground|
 
-![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I12.png)
+![LCD to Arduino](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Connect_LCD.png)
 
 Congratulations! The sensor is fully assembled. Now connect the Arduino to your computer and upload the program to use it.
+
+![Wiring Complete](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/CO2_Fully_Assembled.png)
 
 ## Uploading the Program
 
