@@ -44,7 +44,7 @@ One sensor can be built for roughly $100, and 10 sensors for about $87 each if a
 | Micro SD (or SD) Card. Small is fine - 1 GB is overkill|1|
 |DS3231 Real Time Clock Module|1|
 | CR2032 Battery|1|
-|Jumper wires|10-20|
+|Jumper wires, assorted|10-20|
 |USB Power Bank Battery 5V: optional; 9V battery adapter or other power supplies work as well|1|
 |16x2 LCD Display: Optional; only needed if you want to display the current CO₂ levels|1|
 |Small Box: Cardboard, 3D printed, etc. Just large enough to hold everything, and with holes for the CO₂ sensor intake and LCD screen if used|1|
@@ -73,7 +73,7 @@ Complete connection diagram.
 
 	- (For Uno or Mega) The connectors are built in, so this step is not necessary. However, you may need to run a wire from a particular pin to a breadboard row if more than one connection is required.  
 
-5. Plug the SCD-30 cable headers into either port of the CO₂ sensor. Both ports are the same, but the plug has a correct orientation.
+5. Plug the SCD-30 cable headers into either port of the CO₂ sensor. Both ports are identical, but the plug has a correct orientation.
 
 	![SCD-30 Cable](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I6.png)
 
@@ -323,9 +323,9 @@ A company called Aranet produces CO₂ sensors that are ready to use out of the 
 ## Contributors
 [Eric Woo-Shem](https://github.com/ericwooshem): Sensor design, assembly documentation/electrical diagrams/visualizations, programming: sensor firmware/calibration/RTC time set, component selection.
 
-[Brian Woo-Shem](https://www.brianwooshem.com): Engineering guidance, research, documentation, data analysis, educational curriculum development, sensor testing and validation.
+[Brian Woo-Shem](https://www.brianwooshem.com): Engineering guidance, research, documentation, data analysis, [educational curriculum development](https://www.brianwooshem.com/co2-sensor-lab/), sensor testing and validation.
 
-Thank you to the [Santa Clara University Department of Mechanical Engineering](https://www.scu.edu/engineering/academic-programs/department-of-mechanical-engineering/) for providing photos of sensor builds and feedback from students when this project was adapted into a laboratory for the Modern Instrumentation course.
+Thank you to the [Santa Clara University Department of Mechanical Engineering](https://www.scu.edu/engineering/academic-programs/department-of-mechanical-engineering/) for providing photos of sensor builds and feedback from students when this project was adapted into a [laboratory for the Modern Instrumentation course](https://www.brianwooshem.com/co2-sensor-lab/).
 
 ## License
 
@@ -352,5 +352,5 @@ Arduino IDE and related components are open source and licensed under the GNU GP
 [12] Adafruit, "Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic." https://www.adafruit.com/product/4867   
 [13] CO2Meter.com, "Aranet4 HOME Indoor Air Quality Monitor" https://www.co2meter.com/products/aranet4-home-indoor-air-quality-monitor   
 [14] CO2Meter.com, "CO2 Sensors Improve Energy Efficiency in HVAC," 2022. https://www.co2meter.com/blogs/news/co2-sensors-hvac-energy-efficiency   
-[15] Honeywell, "Carbon Dioxide (CO₂) HVAC Basics," 1998. https://customer.honeywell.com/resources/Techlit/TechLitDocuments/63-0000s/63-7049.pdf
-[16] Acuma [Air.health](https://air.health/): Look up CO₂ levels for any address in the San Francisco Bay Area. 
+[15] Honeywell, "Carbon Dioxide (CO₂) HVAC Basics," 1998. https://customer.honeywell.com/resources/Techlit/TechLitDocuments/63-0000s/63-7049.pdf  
+[16] Aclima [Air.health](https://air.health/): Look up CO₂ levels for any address in the San Francisco Bay Area. 
